@@ -1,0 +1,50 @@
+<!-- DOCTYPE HTML -->
+<html>
+<head>
+<title>Your First React Project</title>
+</head>
+<body>
+<div id="content"></div>
+<script src="https://fb.me/react-0.14.6.js"></script>
+<script src="https://fb.me/react-dom-0.14.6.js"></script>
+<script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+<script type="text/jsx">
+/*Add your React code here*/
+var App = React.createClass({
+  render: function(){
+    return(
+      <div>
+        <Profile />
+        <Hobbies />
+      </div>
+    );
+  }
+});
+
+var Profile = React.createClass({
+  render: function(){
+    return(
+      <div>
+        <h3>My Name</h3>
+        <img src="example.jpg" />
+      </div>
+      )
+  }
+});
+
+var Hobbies = React.createClass({
+  render: function(){
+    return(
+      <div>
+        <h5>My Hobbies</h5>
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(<App />, document.getElementById('content'));
+
+
+</script>
+</body>
+</html>
